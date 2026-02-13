@@ -1,20 +1,82 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🧠 Exam & Interview Question Prediction AI
 
-# Run and deploy your AI Studio app
+An AI-powered platform that analyzes previous-year question papers and interview questions to predict high-probability expected questions for the current year using NLP, embeddings, trend analysis, and Large Language Models.
 
-This contains everything you need to run your app locally.
+The system supports academic exams, technical interviews, coding rounds, and domain-specific papers (engineering, medical, software, etc.).
 
-View your app in AI Studio: https://ai.studio/apps/temp/1
+---
 
-## Run Locally
+# 🚀 Problem Statement
 
-**Prerequisites:**  Node.js
+Students and job aspirants often prepare using past papers, but manually identifying trends across years is difficult and time-consuming.
 
+There was no intelligent system that could:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- Understand past papers
+- Detect topic trends
+- Identify frequently asked concepts
+- Predict likely upcoming questions
+- Explain reasoning behind predictions
+
+This project solves that problem using AI.
+
+---
+
+# 💡 Solution Overview
+
+This platform allows users to upload multiple previous-year papers (PDF/DOC/DOCX).
+
+The AI system then:
+
+1. Extracts questions from documents
+2. Classifies topics and difficulty
+3. Analyzes trends across years
+4. Applies temporal weighting
+5. Detects repeated patterns
+6. Predicts expected questions
+7. Generates detailed answers
+8. Explains why each question is predicted
+
+---
+
+# 🧠 How the AI Works (Simple Explanation)
+
+The AI reads past papers similar to how a teacher analyzes exam patterns.
+
+It looks for:
+
+- Topics asked frequently
+- Topics not asked recently
+- Difficulty progression
+- Question style patterns
+- Rephrased or repeated questions
+
+Then it predicts:
+
+👉 “These questions have high chance this year”
+
+Each prediction includes:
+
+- Confidence score
+- Reason
+- Supporting evidence
+- Detailed answer
+
+---
+
+# ⚙️ AI Pipeline (Step-by-Step)
+
+## Step 1 — Document Upload
+Users upload previous papers in:
+
+- PDF
+- DOC
+- DOCX
+
+---
+
+## Step 2 — Text Extraction
+Documents are converted into structured text using parsers.
+
+Output example:
+
